@@ -1,0 +1,28 @@
+{% extends 'base_generic.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="container login">
+        <div class="col-left">
+            <div class="login-text">
+                <h2>Ticketing Tool<h2>
+                <h2>Welcome</h2>
+                <p>Join us now and be part of our community!</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="login-form">
+                <h2 class="custom-signup-heading">Sign Up</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

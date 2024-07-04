@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>{{ ticket.title }}</h2>
+<p>{{ ticket.description }}</p>
+<p>Status: {{ ticket.status }}</p>
+<p>Created by: {{ ticket.creator }} on {{ ticket.creation_timestamp }}</p>
+
+<h3>Comments</h3>
+<ul>
+    {% for comment in comments %}
+    <li>{{ comment.user }}: {{ comment.content }} ({{ comment.timestamp }})</li>
+    {% endfor %}
+</ul>
+
+{% if user == ticket.assigned_engineer %}
+<h3>Add a comment:</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit">Add comment</button>
+</form>
+<form method="post" action="{% url 'ticket_update' ticket.id %}">
+    {% csrf_token %}
+    <button type="submit">Update Ticket Status</button>
+</form>
+{% endif %}
+{% endblock %}

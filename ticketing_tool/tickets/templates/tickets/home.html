@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'tickets/home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class='Logo'>Ticketing Tool</h1>
+            <ul>
+                <li><a href="{% url 'ticket_list' %}" class="button">View Tickets</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}" class="button">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}" class="button">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h2>Welcome to the Ticketing System</h2>
+        <div class="image-containe">
+            <marquee behavior="scroll" direction="left" width="100%">
+            <img class="image-righ" src="https://www.itarian.com/images/what-is-a-ticketing-system.png" alt="Description of the image" width="350" height="250">
+            <img class="image-lef" src="https://acmatel.com/wp-content/uploads/2017/08/helpdesk-ticket-system.jpg" alt="Description of the image" width="350" height="250">
+            <img class="image-lef" src="https://itassetmanagement.in/wp-content/uploads/2019/12/How-helpdesk-ticketing-system-benefits-customer-service.png" width="350" height="250">
+            <img class="image-lef" src="https://static.vecteezy.com/system/resources/thumbnails/002/178/419/small_2x/contact-us-customer-service-for-personal-assistant-service-person-advisor-and-social-media-network-illustration-vector.jpg" alt="Description of the image" width="350" height="250">
+            <img class="image-lef" src="https://longerdays.com/wp-content/uploads/2017/06/Customer-service-blog.png" alt="Description of the image" width="350" height="250">
+            </marquee>
+        </div>
+    </div>
+    <div>
+        <h1 class="head">
+            “Just one small positive thought in the morning can change your whole day.”
+            
+        </h1>
+    </div>
+   <div>
+    <a href="{% url 'account_signup' %}" class="button">Sign Up</a>
+   </div>
+    <br>
+   
+
+    
+</body>
+</html>

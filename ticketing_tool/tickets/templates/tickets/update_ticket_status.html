@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'tickets/update_ticket.css' %}">
+    <div class="form-container">
+        <div class="container">
+            <h2>Update Ticket Status</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
