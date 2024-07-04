@@ -68,28 +68,28 @@ Project Structure Description
     - manage.py: A command-line utility that lets you interact with this Django project.
 
 ticketing_tool/: The main project directory.
-    -init.py: An empty file that tells Python that this directory should be considered a Python package.
-    -settings.py: Contains all the settings and configurations for your Django project.
-    -urls.py: The URL declarations for this Django project.
-    -wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
-    -asgi.py: An entry-point for ASGI-compatible web servers to serve your project.
+    - init.py: An empty file that tells Python that this directory should be considered a Python package.
+    - settings.py: Contains all the settings and configurations for your Django project.
+    - urls.py: The URL declarations for this Django project.
+    - wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
+    - asgi.py: An entry-point for ASGI-compatible web servers to serve your project.
 
 tickets/: The app directory.
-    -init.py: An empty file that tells Python that this directory should be considered a Python package.
-    -admin.py: Used to register models to be managed through the Django admin interface.
-    -apps.py: Contains the configuration for the app.
-    -forms.py: Contains forms for the app.
-    -models.py: Contains models for the app.
-    -tests.py: Contains tests for the app.
-    -urls.py: The URL declarations for this app.
-    -views.py: Contains views for the app.
+    - init.py: An empty file that tells Python that this directory should be considered a Python package.
+    - admin.py: Used to register models to be managed through the Django admin interface.
+    - apps.py: Contains the configuration for the app.
+    - forms.py: Contains forms for the app.
+    - models.py: Contains models for the app.
+    - tests.py: Contains tests for the app.
+    - urls.py: The URL declarations for this app.
+    - views.py: Contains views for the app.
 
 static/: The directory for static files.
-    -css/: Contains CSS files.
-        -base.css: Base CSS file.
-        -login.css: CSS for the login page.
-        -signup.css: CSS for the signup page.
-
+   - css/: Contains CSS files.
+        - base.css: Base CSS file.
+        - login.css: CSS for the login page.
+        - signup.css: CSS for the signup page.
+ 
 templates/: The directory for templates.
   - base_generic.html: The base template.
   - index.html: The homepage template.
